@@ -1,0 +1,76 @@
+{
+    "name": "jsselfmethods",
+    "displayName": "JsSelfMethods",
+    "description": "This is a library of JavaScript methods",
+    "version": "0.0.2",
+    "publisher":"detanx",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "favicon.png",
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onCommand:extension.throttle",
+        "onCommand:extension.debounce",
+        "onCommand:extension._selfCurry",
+        "onCommand:extension.febonacci",
+        "onCommand:extension.memory",
+        "onCommand:extension.moneyFormat",
+        "onCommand:extension.escape"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.throttle",
+                "title": "method: 节流"
+            },
+            {
+                "command": "extension.debounce",
+                "title": "method: 防抖"
+            },
+            {
+                "command": "extension._selfCurry",
+                "title": "method: 柯里化"
+            },
+            {
+                "command": "extension.febonacci",
+                "title": "method: 斐波拉契数列"
+            },
+            {
+                "command": "extension.memory",
+                "title": "method: 记忆函数"
+            },
+            {
+                "command": "extension.moneyFormat",
+                "title": "method: 金额千位分隔符"
+            },
+            {
+                "command": "extension.escape",
+                "title": "method: 敏感符号转义"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "readme": "node ./scripts/readme.js",
+        "build": "node ./scripts/precommand.js && vsce package",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.6",
+        "@types/node": "^10.12.21",
+        "@types/vscode": "^1.37.0",
+        "glob": "^7.1.4",
+        "mocha": "^6.1.4",
+        "typescript": "^3.3.1",
+        "tslint": "^5.12.1",
+        "vscode-test": "^1.0.2"
+    }
+}
