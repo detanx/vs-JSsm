@@ -1,8 +1,8 @@
 {
-    "name": "jsselfmethods",
-    "displayName": "JsSelfMethods",
+    "name": "js-self-methods",
+    "displayName": "js-self-methods",
     "description": "This is a library of JavaScript methods",
-    "version": "0.0.2",
+    "version": "1.0.4",
     "publisher":"detanx",
     "engines": {
         "vscode": "^1.37.0"
